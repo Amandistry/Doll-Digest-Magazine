@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amanda Ross — Graphic Design</title>
+  <link rel="stylesheet" href="index-4.css">
+  <link rel="stylesheet" href="https://use.typekit.net/iko3cql.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <a href="index.html">
+      <img class="logo" src="images/logo.png" alt="Amanda Ross logo">
+    </a>
+    <a href="index2.html" aria-label="Open menu">
+      <img class="ham-menu" src="images/Hamburger White Menu.png" alt="">
+    </a>
+  </header>
+
+  <!-- HERO TEXT -->
+  <div class="word-package">
+    <p class="amanda">Amanda Ross</p>
+    <p class="graphic-design">Graphic Design</p>
+    <p class="projects">scroll to explore</p>
+  </div>
+
+  <!-- TALL SCROLL SECTION — wheel sticks while you scroll through it -->
+  <section class="wheel-section" id="wheelSection">
+    <div class="wheel-sticky">
+      <div class="rotating-wheel" id="rotatingWheel">
+
+        <div class="wheel-img-wrapper">
+          <a href="index-8.html" class="wheel-img-inner">
+            <img src="images/doll.png" alt="Doll Digest Magazine">
+            <span class="proj-title">Doll Digest Magazine</span>
+          </a>
+        </div>
+
+        <div class="wheel-img-wrapper">
+          <a href="index-11.html" class="wheel-img-inner">
+            <img src="images/tealasa.png" alt="ASA Summer Membership Drive">
+            <span class="proj-title">ASA Summer Membership Drive</span>
+          </a>
+        </div>
+
+        <div class="wheel-img-wrapper">
+          <a href="index-13.html" class="wheel-img-inner">
+            <img src="images/lilaicon.png" alt="Lila Restaurant">
+            <span class="proj-title">Lila Restaurant</span>
+          </a>
+        </div>
+
+        <div class="wheel-img-wrapper">
+          <a href="index-10.html" class="wheel-img-inner">
+            <img src="images/springasa.png" alt="ASA Spring Membership Drive">
+            <span class="proj-title">ASA Spring Membership Drive</span>
+          </a>
+        </div>
+
+        <div class="wheel-img-wrapper">
+          <a href="index-9.html" class="wheel-img-inner">
+            <img src="images/ASAlapelpin Icon.png" alt="ASA Lapel Pin">
+            <span class="proj-title">ASA Lapel Pin</span>
+          </a>
+        </div>
+
+        <div class="wheel-img-wrapper">
+          <a href="index-12.html" class="wheel-img-inner">
+            <img src="images/MC-con.png" alt="DEI Poster">
+            <span class="proj-title">DEI Poster</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <div class="footer-ticker">
+      <div class="ticker-track">
+        <span>Open for projects &nbsp;✦&nbsp; Graphic Design &nbsp;✦&nbsp; Photography &nbsp;✦&nbsp; Jewelry &nbsp;✦&nbsp; Open for projects &nbsp;✦&nbsp; Graphic Design &nbsp;✦&nbsp; Photography &nbsp;✦&nbsp; Jewelry &nbsp;✦&nbsp;</span>
+      </div>
+    </div>
+
+    <div class="footer-main">
+      <h2 class="footer-heading">Like what you see? Let's talk.</h2>
+      <a href="index-15.html" class="footer-btn-link">
+        <button class="footer-btn" type="button">Get in touch</button>
+      </a>
+    </div>
+
+    <div class="footer-img-strip">
+      <a href="index-8.html"><img src="images/doll.png" alt="Barbie project" /></a>
+      <a href="index-11.html"><img src="images/tealasa.png" alt="Teal ASA project" /></a>
+      <a href="index-13.html"><img src="images/lilaicon.png" alt="Lila Restaurant project" /></a>
+      <a href="index-10.html"><img src="images/springasa.png" alt="Spring ASA project" /></a>
+      <a href="index-9.html"><img src="images/ASAlapelpin Icon.png" alt="ASA lapel pin" /></a>
+      <a href="index-12.html"><img src="images/MC-con.png" alt="MC project" /></a>
+    </div>
+
+    <div class="footer-bottom">
+      <span>Made with love.</span>
+      <a href="https://www.linkedin.com/in/amanda2ross/" aria-label="LinkedIn" class="footer-linkedin">in</a>
+    </div>
+
+  </footer>
+
+  <script>
+    (function () {
+      const section = document.getElementById('wheelSection');
+      const wheel   = document.getElementById('rotatingWheel');
+      const inners  = document.querySelectorAll('.wheel-img-inner');
+      if (!section || !wheel) return;
+
+      function update() {
+        const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+        const maxScroll  = Math.max(section.offsetHeight - window.innerHeight, 1);
+        const scrolled   = window.scrollY - sectionTop;
+        const progress   = Math.max(0, Math.min(1, scrolled / maxScroll));
+        const deg        = progress * 360;
+
+        wheel.style.transform = 'rotate(' + deg + 'deg)';
+        inners.forEach(function (inner) {
+          inner.style.transform = 'rotate(' + (-deg) + 'deg)';
+        });
+      }
+
+      window.addEventListener('scroll', update, { passive: true });
+      update();
+    })();
+  </script>
+
+</body>
+</html>

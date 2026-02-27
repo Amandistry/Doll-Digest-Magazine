@@ -1,0 +1,277 @@
+/* ============================= */
+/* RESET                         */
+/* ============================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  line-height: 1.6;
+
+  background: linear-gradient(90deg, #d7a6a2 0%, #cdb4b4 50%, #d8bca6 100%);
+}
+
+/* ============================= */
+/* NAVIGATION                    */
+/* ============================= */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 90px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.ham-menu {
+  width: 75px;
+  height: 100px;
+}
+
+/* ============================= */
+/* HERO / INTRO                  */
+/* ============================= */
+
+.cta-txt-box {
+  padding: 120px 90px 80px 90px;
+}
+
+.aman-cta {
+  font-family: "blackcurrant", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 57px;
+  color: rgba(59, 40, 70);
+  margin-bottom: 10px;
+}
+
+.cta-sub {
+  font-size: 26px;
+  color: rgba(59, 40, 70);
+  margin-bottom: 40px;
+}
+
+.btn-link {
+  text-decoration: none;
+}
+
+/* ============================= */
+/* ABOUT SECTION                 */
+/* ============================= */
+
+.graphic {
+  padding: 120px 90px 60px 90px;
+}
+
+.ab {
+  font-family: "blackcurrant", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  color: rgba(59, 40, 70);
+  margin-bottom: 10px;
+}
+
+.aman {
+  font-size: 20px;
+  color: rgba(59, 40, 70);
+  margin-bottom: 20px;
+}
+
+.about-me {
+  font-size: 18px;
+  color: rgba(59, 40, 70);
+  max-width: 800px;
+}
+
+.grap {
+  font-family: "blackcurrant", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgba(59, 40, 70);
+  margin-top: 40px;
+}
+
+/* ============================= */
+/* GLOBAL BUTTON STYLE (Brand)   */
+/* ============================= */
+
+button {
+  font: inherit;
+  padding: 0.65em 1.4em;
+  border-radius: 999px;
+  border: none;
+  background-color: #35B58E;
+  color: #ffffff;
+  cursor: pointer;
+  transition:
+    background-color 200ms ease,
+    transform 150ms ease,
+    box-shadow 200ms ease;
+}
+
+button:hover {
+  background-color: #2e9e7b;
+  box-shadow: 0 6px 18px rgba(53, 181, 142, 0.35);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+button:focus-visible {
+  outline: 3px solid rgba(53, 181, 142, 0.5);
+  outline-offset: 3px;
+}
+
+/* ============================= */
+/* CIRCULAR SLIDESHOW            */
+/* ============================= */
+
+.slideshow {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 90px 0 140px 0;
+}
+
+/* Circle container */
+.slides {
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.18);
+}
+
+/* Slides layered (fade system) */
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 400ms ease;
+  text-decoration: none;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ============================= */
+/* ARROW BUTTONS (side circles)  */
+/* Overrides global button style */
+/* ============================= */
+
+.slideshow .prev,
+.slideshow .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 80px;
+  height: 80px;
+  padding: 0;
+
+  border-radius: 50%;
+  border: none;
+
+  background: #4b3b35; /* warm brown */
+  color: white;
+
+  box-shadow: none;
+  display: grid;
+  place-items: center;
+
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease,
+    background 200ms ease;
+}
+
+/* Position */
+.slideshow .prev { left: 12%; }
+.slideshow .next { right: 12%; }
+
+/* Hover (polished) */
+.slideshow .prev:hover,
+.slideshow .next:hover {
+  transform: translateY(-50%) scale(1.12);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.3);
+  background: #35B58E; /* brand pop on hover */
+}
+
+/* Active click */
+.slideshow .prev:active,
+.slideshow .next:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+/* Focus override */
+.slideshow .prev:focus-visible,
+.slideshow .next:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.85);
+  outline-offset: 3px;
+}
+
+/* ============================= */
+/* RESPONSIVE                    */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 24px 40px;
+  }
+
+  .cta-txt-box {
+    padding: 90px 40px 60px 40px;
+  }
+
+  .graphic {
+    padding: 90px 40px 40px 40px;
+  }
+
+  .aman-cta {
+    font-size: 40px;
+  }
+
+  .cta-sub {
+    font-size: 20px;
+  }
+
+  .slides {
+    width: 350px;
+    height: 350px;
+  }
+
+  .slideshow .prev,
+  .slideshow .next {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+
+  .slideshow .prev { left: 5%; }
+  .slideshow .next { right: 5%; }
+}

@@ -1,0 +1,102 @@
+/* ============================= */
+/* RESET                         */
+/* ============================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  line-height: 1.6;
+
+  background: linear-gradient(90deg, #d7a6a2 0%, #cdb4b4 50%, #d8bca6 100%);
+}
+
+/* ============================= */
+/* NAVIGATION                    */
+/* ============================= */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 90px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.ham-menu {
+  width: 75px;
+  height: 100px;
+}
+
+/* ============================= */
+/* HERO / INTRO                  */
+/* ============================= */
+
+.cta-txt-box {
+  padding: 120px 90px 80px 90px;
+}
+
+.aman-cta {
+  font-family: "blackcurrant", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 57px;
+  color: rgba(59, 40, 70);
+  margin-bottom: 10px;
+}
+
+.cta-sub {
+  font-size: 26px;
+  color: rgba(59, 40, 70);
+  margin-bottom: 40px;
+}
+
+.btn-link {
+  text-decoration: none;
+}
+
+button {
+  margin-left: 90px;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  font: inherit;
+  padding: 0.65em 1.4em;
+  border-radius: 999px;
+  border: none;
+  background-color: #35B58E;
+  color: #ffffff;
+  cursor: pointer;
+  transition:
+    background-color 200ms ease,
+    transform 150ms ease,
+    box-shadow 200ms ease;
+}
+
+button:hover {
+  background-color: #2e9e7b;
+  box-shadow: 0 6px 18px rgba(53, 181, 142, 0.35);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+button:focus-visible {
+  outline: 3px solid rgba(53, 181, 142, 0.5);
+  outline-offset: 3px;
+}
+
+
+.barbie {
+  margin-left: 90px;
+  max-width: 100%;
+  max-height: 90vh;
+}

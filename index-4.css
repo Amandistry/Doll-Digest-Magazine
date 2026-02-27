@@ -1,0 +1,207 @@
+/* ============================= */
+/* RESET                         */
+/* ============================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(90deg, #d7a6a2 0%, #cdb4b4 50%, #d8bca6 100%);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ============================= */
+/* NAVIGATION                    */
+/* ============================= */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 90px;
+}
+
+.logo     { width: 100px; height: 100px; }
+.ham-menu { width: 75px;  height: 100px; }
+
+/* ============================= */
+/* HERO TEXT                     */
+/* ============================= */
+
+.word-package {
+  padding: 40px 90px 20px 90px;
+}
+
+.amanda {
+  font-family: "blackcurrant", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: rgba(59, 40, 70);
+}
+
+.graphic-design {
+  font-family: "blackcurrant", sans-serif;
+  font-weight: 400;
+  font-size: 57px;
+  color: rgba(59, 40, 70);
+}
+
+.projects {
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  color: rgba(59, 40, 70, 0.55);
+  letter-spacing: 0.04em;
+}
+
+/* ============================= */
+/* WHEEL SCROLL SECTION          */
+/* ============================= */
+
+/* Tall section gives scroll room — wheel sticks inside it */
+.wheel-section {
+  height: 280vh;
+  position: relative;
+}
+
+.wheel-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================= */
+/* ROTATING WHEEL                */
+/* ============================= */
+
+/*
+  Wheel: 520×520px, center = (260, 260), radius = 260px.
+  overflow: visible so project circles outside the border are still shown.
+*/
+.rotating-wheel {
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(59, 40, 70, 0.4);
+  position: relative;
+  overflow: visible;
+  will-change: transform;
+  flex-shrink: 0;
+}
+
+/*
+  Each wrapper: 120×120px, placed at the top of the wheel.
+  left: 200px  (260 - 60)
+  top:  -60px  (0 - 60)
+  transform-origin: 60px 320px
+    → pivot at (200+60, -60+320) = (260, 260) = wheel center  ✓
+  Each nth-child is rotated 60° further around the wheel.
+*/
+.wheel-img-wrapper {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  left: 200px;
+  top: -60px;
+  transform-origin: 60px 320px;
+}
+
+.wheel-img-wrapper:nth-child(1) { transform: rotate(0deg); }
+.wheel-img-wrapper:nth-child(2) { transform: rotate(60deg); }
+.wheel-img-wrapper:nth-child(3) { transform: rotate(120deg); }
+.wheel-img-wrapper:nth-child(4) { transform: rotate(180deg); }
+.wheel-img-wrapper:nth-child(5) { transform: rotate(240deg); }
+.wheel-img-wrapper:nth-child(6) { transform: rotate(300deg); }
+
+/* Inner link — counter-rotated by JS so images stay upright */
+.wheel-img-inner {
+  display: block;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  /* transform set by JS */
+}
+
+.wheel-img-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 300ms ease;
+}
+
+.wheel-img-inner:hover img {
+  transform: scale(1.08);
+}
+
+/* Title overlay — fades in on hover */
+.proj-title {
+  position: absolute;
+  inset: 0;
+  background: rgba(59, 40, 70, 0.88);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  font-size: 11px;
+  line-height: 1.4;
+  padding: 12px;
+  opacity: 0;
+  transition: opacity 220ms ease;
+  pointer-events: none;
+}
+
+.wheel-img-inner:hover .proj-title {
+  opacity: 1;
+}
+
+/* ============================= */
+/* RESPONSIVE                    */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .nav      { padding: 24px 40px; }
+  .logo     { width: 70px; height: 70px; }
+  .ham-menu { width: 55px; height: 70px; }
+
+  .word-package   { padding: 30px 40px 16px 40px; }
+  .graphic-design { font-size: 40px; }
+
+  .wheel-section  { height: 220vh; }
+
+  .rotating-wheel {
+    width: 340px;
+    height: 340px;
+  }
+
+  /* Recalculate wrapper position for smaller wheel (radius 170px) */
+  .wheel-img-wrapper {
+    width: 90px;
+    height: 90px;
+    left: 125px;  /* 170 - 45 */
+    top: -45px;
+    transform-origin: 45px 215px; /* pivot at (125+45, -45+215) = (170,170) */
+  }
+
+  .wheel-img-inner {
+    width: 90px;
+    height: 90px;
+  }
+
+  .proj-title { font-size: 10px; padding: 8px; }
+}

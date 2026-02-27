@@ -1,0 +1,23 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 1800px;
+  padding-top: 0px;
+}
+
+.ham-menu {
+  height: 100px;
+  width: 75px;
+  margin-left: 0;
+  position: absolute;
+  margin-top: 20px;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+  margin-bottom: 0;
+  margin-left: 90px;
+  position: absolute;
+  margin-top: 20px;
+}

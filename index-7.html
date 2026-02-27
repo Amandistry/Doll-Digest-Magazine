@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amanda Ross — Portfolio</title>
+
+  <link rel="stylesheet" href="index-7.css" />
+  <link rel="stylesheet" href="https://use.typekit.net/iko3cql.css" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <!-- NAV -->
+  <header class="nav">
+    <a href="index.html" aria-label="Go to home page">
+      <img class="logo" src="images/logo.png" alt="Amanda Ross logo" />
+    </a>
+    <a href="index2.html" aria-label="Open menu">
+      <img class="ham-menu" src="images/Hamburger White Menu.png" alt="" />
+    </a>
+  </header>
+
+  <!-- HERO -->
+  <section class="cta-txt-box" aria-label="Intro">
+    <h1 class="aman-cta">Amanda Ross</h1>
+    <p class="cta-sub">Graphic designer working across branding, print, and web.</p>
+
+  </section>
+
+  <!-- ABOUT -->
+  <section class="graphic" aria-label="About me">
+    <div class="about">
+      <h2 class="ab">About Me</h2>
+      <p class="aman">Amanda Ross</p>
+
+      <p class="about-me">
+        I am a graphic designer, photographer, and jewelry maker who loves turning creative ideas into real things.
+        I have a wide variety of experiences including branding, editorial layouts, and digital graphics. I’ve been using
+        Adobe Illustrator, Photoshop, and InDesign for many years to bring my design work to life with precision and creativity.
+        Outside of graphic design, I do underwater photography, which I see as a creative collaboration between myself and my subject.
+        Regardless of medium or discipline, I am all about creativity, storytelling, and bringing unique visions to life.
+      </p>
+
+      <h2 class="grap">Graphic Design</h2>
+    </div>
+  </section>
+
+  <!-- SLIDESHOW -->
+  <section class="slideshow" id="work" aria-label="Portfolio Slideshow">
+    <div class="slides" id="slides">
+      <a href="index-8.html" class="slide active">
+        <img src="images/doll.png" alt="Doll Digest Magazine project preview" />
+      </a>
+
+      <a href="https://amandaross.design/asa-summer-membership-social-media-banners" class="slide">
+        <img src="images/tealasa.png" alt="ASA Summer Membership campaign preview" />
+      </a>
+
+      <a href="https://amandaross.design/lila-restaurant" class="slide">
+        <img src="images/lilaicon.png" alt="Lila Restaurant branding preview" />
+      </a>
+
+      <a href="https://amandaross.design/asa-spring-web-banner" class="slide">
+        <img src="images/springasa.png" alt="ASA Spring Web Banner preview" />
+      </a>
+
+      <a href="index-9.html" class="slide">
+        <img src="images/ASAlapelpin Icon.png" alt="ASA Lapel Pin design preview" />
+      </a>
+
+      <a href="https://amandaross.design/dei-poster" class="slide">
+        <img src="images/MC-con.png" alt="DEI Poster design preview" />
+      </a>
+
+    </div>
+
+    <button class="prev" type="button" aria-label="Previous slide">❮</button>
+    <button class="next" type="button" aria-label="Next slide">❯</button>
+  </section>
+
+  <!-- SLIDESHOW SCRIPT (fade + auto + pause on hover) -->
+  <script>
+    (function () {
+      const slideEls = Array.from(document.querySelectorAll(".slide"));
+      const prevBtn = document.querySelector(".prev");
+      const nextBtn = document.querySelector(".next");
+      const slideshow = document.querySelector(".slideshow");
+
+      if (!slideEls.length || !prevBtn || !nextBtn || !slideshow) return;
+
+      let index = 0;
+      let timer = null;
+      const AUTO_MS = 3500;
+
+      function showSlide(i) {
+        slideEls.forEach((s) => s.classList.remove("active"));
+        index = (i + slideEls.length) % slideEls.length;
+        slideEls[index].classList.add("active");
+      }
+
+      function next() { showSlide(index + 1); }
+      function prev() { showSlide(index - 1); }
+
+      function startAuto() {
+        stopAuto();
+        timer = setInterval(next, AUTO_MS);
+      }
+
+      function stopAuto() {
+        if (timer) clearInterval(timer);
+        timer = null;
+      }
+
+      nextBtn.addEventListener("click", () => { next(); startAuto(); });
+      prevBtn.addEventListener("click", () => { prev(); startAuto(); });
+
+      slideshow.addEventListener("mouseenter", stopAuto);
+      slideshow.addEventListener("mouseleave", startAuto);
+
+      // Init
+      showSlide(0);
+      startAuto();
+    })();
+  </script>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <div class="footer-ticker">
+      <div class="ticker-track">
+        <span>Open for projects &nbsp;✦&nbsp; Graphic Design &nbsp;✦&nbsp; Photography &nbsp;✦&nbsp; Jewelry &nbsp;✦&nbsp; Open for projects &nbsp;✦&nbsp; Graphic Design &nbsp;✦&nbsp; Photography &nbsp;✦&nbsp; Jewelry &nbsp;✦&nbsp;</span>
+      </div>
+    </div>
+
+    <div class="footer-main">
+      <h2 class="footer-heading">Like what you see? Let's talk.</h2>
+      <a href="index-15.html" class="footer-btn-link">
+        <button class="footer-btn" type="button">Get in touch</button>
+      </a>
+    </div>
+
+    <div class="footer-img-strip">
+      <a href="index-8.html"><img src="images/doll.png" alt="Barbie project" /></a>
+      <a href="index-11.html"><img src="images/tealasa.png" alt="Teal ASA project" /></a>
+      <a href="index-13.html"><img src="images/lilaicon.png" alt="Lila Restaurant project" /></a>
+      <a href="index-10.html"><img src="images/springasa.png" alt="Spring ASA project" /></a>
+      <a href="index-9.html"><img src="images/ASAlapelpin Icon.png" alt="ASA lapel pin" /></a>
+      <a href="index-12.html"><img src="images/MC-con.png" alt="MC project" /></a>
+    </div>
+
+    <div class="footer-bottom">
+      <span>Made with love.</span>
+      <a href="https://www.linkedin.com/in/amanda2ross/" aria-label="LinkedIn" class="footer-linkedin">in</a>
+    </div>
+
+  </footer>
+
+</body>
+</html>

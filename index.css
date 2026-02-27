@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+/* ============================= */
+/* FOOTER                        */
+/* ============================= */
+
+.footer {
+  background-color: rgba(59, 40, 70);
+}
+
+/* --- Ticker strip --- */
+
+.footer-ticker {
+  background-color: #35B58E;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 12px 0;
+}
+
+.ticker-track {
+  display: inline-block;
+  animation: ticker 22s linear infinite;
+  font-family: Helvetica, sans-serif;
+  font-size: 15px;
+  color: #ffffff;
+  letter-spacing: 0.06em;
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* --- Main CTA area --- */
+
+.footer-main {
+  padding: 80px 90px 60px 90px;
+}
+
+.footer-heading {
+  font-family: "blackcurrant", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 57px;
+  color: #ffffff;
+  margin-bottom: 32px;
+}
+
+.footer-btn-link {
+  text-decoration: none;
+}
+
+.footer-btn {
+  font: inherit;
+  padding: 0.65em 1.6em;
+  border-radius: 999px;
+  border: 2px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+.footer-btn:hover {
+  background-color: #ffffff;
+  color: rgba(59, 40, 70);
+}
+
+/* --- Image strip --- */
+
+.footer-img-strip {
+  display: flex;
+  gap: 24px;
+  padding: 40px 90px;
+  overflow-x: auto;
+}
+
+.footer-img-strip a {
+  display: contents;
+}
+
+.footer-img-strip img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+  opacity: 0.85;
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.footer-img-strip img:hover {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+/* --- Bottom bar --- */
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 90px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.footer-linkedin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: rgba(59, 40, 70);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+.footer-linkedin:hover {
+  background-color: #35B58E;
+  color: #ffffff;
+}

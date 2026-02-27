@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+
+.aman-cta {
+  color: rgba(59, 40, 70);
+  font-family: "blackcurrant", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 57px;
+   margin-top: 400px;
+  padding-left: 90px;
+    margin-bottom: 0;
+
+}
+
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 90px;
+}
+
+.graphic-design-txt {
+
+
+
+
+}
+
+.ham-menu {
+height: 100px;
+width: 75px;
+margin-left: 0;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+}
+
+
+.cta-but {
+border-radius: 29px;
+padding: 20px;
+margin-left: 90px;
+margin-top: 23px;
+margin-bottom: 100px;
+border-color: rgba(59, 40, 70);
+}
+
+.cta-sub {
+  font-family: Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 26px;
+  padding-left: 90px;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: rgba(59, 40, 70);
+}
+
+
+.photography-button {
+border-radius: 29px;
+padding: 20px;
+margin-left: 90px;
+margin-top: 0;
+border-color: rgba(59, 40, 70);
+}
+
+.photography-txt{
+  font-family: "blackcurrant", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  padding-left: 90px;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: rgba(59, 40, 70, 0.753);
+}
+
+body {
+  /* background-image: url(page.jpeg); */
+  /* background-repeat: no-repeat; */
+  /* background-size: 1000px auto; */
+  height: 800px;
+  position: relative;
+
+}
+
+.hero {
+  background-image: url("images/top of cta.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.space {
+
+  height: 100px;
+}
+
+
