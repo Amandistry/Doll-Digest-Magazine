@@ -11,7 +11,7 @@
 body {
   font-family: Helvetica, sans-serif;
   line-height: 1.6;
-  background: linear-gradient(90deg, #d7a6a2 0%, #cdb4b4 50%, #d8bca6 100%);
+  background: #1e3a8a;
 }
 
 a {
@@ -150,7 +150,7 @@ a {
 .proj-title {
   position: absolute;
   inset: 0;
-  background: rgba(59, 40, 70, 0.88);
+  background: rgba(30, 58, 138, 0.88);
   color: #ffffff;
   border-radius: 50%;
   display: flex;

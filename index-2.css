@@ -1,10 +1,7 @@
 @charset "UTF-8";
 
 body {
-  background-image: url(menu.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-color: #1e3a8a;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -44,7 +41,7 @@ a {
 }
 
 .close-btn:hover {
-  background-color: rgba(59, 40, 70);
+  background-color: #1e3a8a;
   color: #ffffff;
 }
 
@@ -116,7 +113,7 @@ a {
 }
 
 .pill-link:hover {
-  background-color: rgba(59, 40, 70);
+  background-color: #1e3a8a;
   color: #ffffff;
 }
 

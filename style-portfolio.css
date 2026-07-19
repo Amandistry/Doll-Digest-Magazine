@@ -81,19 +81,14 @@ border-color: rgba(59, 40, 70);
 }
 
 body {
-  /* background-image: url(page.jpeg); */
-  /* background-repeat: no-repeat; */
-  /* background-size: 1000px auto; */
+  background-color: #1e3a8a;
   height: 800px;
   position: relative;
 
 }
 
 .hero {
-  background-image: url("images/top of cta.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-color: #1e3a8a;
 }
 
 .space {

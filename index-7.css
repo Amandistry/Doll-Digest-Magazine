@@ -12,7 +12,7 @@ body {
   font-family: Helvetica, sans-serif;
   line-height: 1.6;
 
-  background: linear-gradient(90deg, #d7a6a2 0%, #cdb4b4 50%, #d8bca6 100%);
+  background: #1e3a8a;
 }
 
 /* ============================= */
@@ -193,7 +193,7 @@ button:focus-visible {
   border-radius: 50%;
   border: none;
 
-  background: #4b3b35; /* warm brown */
+  background: #1e40af;
   color: white;
 
   box-shadow: none;
